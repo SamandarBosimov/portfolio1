@@ -1,0 +1,859 @@
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900;&display=swap');
+
+
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+  }
+
+
+  body {
+      background-color: #081b29;
+      color: #ededed;
+  }
+
+  .checkboxbtn {
+      font-size: 30px;
+      cursor: pointer;
+      position: relative;
+      z-index: 10;
+      display: none;
+  }
+
+  #check {
+      display: none;
+  }
+
+
+
+  .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px 10%;
+      background: transparent;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+  }
+
+  .logo {
+      position: relative;
+      font-size: 25px;
+      color: #ededed;
+      text-decoration: none;
+      font-weight: 600;
+  }
+
+  .logo::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: #081b29;
+      animation: showRight 1s ease forwards;
+      animation-delay: .4s;
+  }
+
+  .navbar a {
+      font-size: 18px;
+      color: #ededed;
+      text-decoration: none;
+      font-weight: 500;
+      margin-left: 35px;
+      transition: .3s;
+  }
+
+  .navbar a:hover,
+  .navbar a.active {
+      /* color: #00abf0; */
+      color: #00abf0;
+  }
+
+  .home {
+      height: 100vh;
+      background: url('');
+      display: flex;
+      align-items: center;
+      padding: 0 10%;
+  }
+
+  .home-content {
+
+      max-width: 600px;
+  }
+
+  .home-content h1 {
+      position: relative;
+      font-size: 56px;
+      font-weight: 700;
+      line-height: 1.2;
+  }
+
+  .home-content h1::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: #081b29;
+      animation: showRight 1s ease forwards;
+      animation-delay: 1s;
+  }
+
+
+  .home-content h3 {
+      position: relative;
+      font-size: 32px;
+      font-weight: 700;
+      /* color: #00abf0; */
+      color: #00abf0;
+  }
+
+  .home-content h3::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: #081b29;
+      animation: showRight 1s ease forwards;
+      animation-delay: 1.3s;
+  }
+
+
+  .home-content p {
+      position: relative;
+      font-size: 16px;
+      margin: 20px 0 40px;
+  }
+
+  .home-content p::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: #081b29;
+      animation: showRight 1s ease forwards;
+      animation-delay: 1.6s;
+  }
+
+
+
+
+  .home-content .btn-box {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      width: 345px;
+      height: 50px;
+
+  }
+
+  .home-content .btn-box::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: #081b29;
+      animation: showRight 1s ease forwards;
+      animation-delay: 1.9s;
+      z-index: 2;
+  }
+
+
+
+  .btn-box a {
+      position: relative;
+      display: inline-flex;
+      width: 150px;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      background: #00abf0;
+      border: 2px solid #00abf0;
+      border-radius: 8px;
+      font-size: 19px;
+      color: #081b29;
+      text-decoration: none;
+      font-weight: 600;
+      letter-spacing: 1px;
+      z-index: 1;
+      overflow: hidden;
+      transition: .5s;
+  }
+
+  .btn-box a:hover {
+      color: #00abf0;
+  }
+
+  .btn-box a:nth-child(2) {
+      background: transparent;
+      color: #00abf0;
+  }
+
+  .btn-box a:nth-child(2):hover {
+      color: #081b29;
+  }
+
+  .btn-box a:nth-child(2)::before {
+      background: #00abf0;
+  }
+
+  .btn-box a::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background: #081b29;
+      z-index: -1;
+      transition: .5s;
+  }
+
+  .btn-box a:hover::before {
+      width: 100%;
+  }
+
+
+  .home-sci {
+      position: absolute;
+      bottom: 40px;
+      width: 170px;
+      display: flex;
+      justify-content: space-between;
+  }
+
+  .home-sci::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: #081b29;
+      animation: showRight 1s ease forwards;
+      animation-delay: 2.5s;
+      z-index: 2;
+  }
+
+
+  .home-sci a {
+      position: relative;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      background: transparent;
+      border: 2px solid #00abf0;
+      border-radius: 50%;
+      font-size: 20px;
+      color: #00abf0;
+      text-decoration: none;
+      z-index: 1;
+      overflow: hidden;
+      transition: .5s;
+  }
+
+  .home-sci a:hover {
+      color: #081b29;
+  }
+
+  .home-sci a::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background: #00abf0;
+      z-index: -1;
+      transition: .5s;
+  }
+
+  .home-sci a:hover::before {
+      width: 100%;
+
+  }
+
+
+
+  .home-imgHover {
+      position: absolute;
+      top: o;
+      right: 30px;
+      width: 500px;
+      height: 100%;
+      background: transparent;
+      transition: 3s;
+      animation: manipActiveHover .1s forwards;
+      animation-delay: 4s;
+      pointer-events: none;
+  }
+
+  .home-imgHover:hover {
+      opacity: .8;
+  }
+
+  .home-imgHover::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 120%;
+      height: 100%;
+      background: #081b29;
+      animation: showRight 1s ease forwards;
+      animation-delay: 3s;
+      z-index: 100;
+  }
+.rasm__men{
+    width: 500px;
+    height: 900px;
+    margin: auto;
+}
+.rasm__men img{
+    width: 600px;
+}
+
+
+
+
+
+
+  /* About */
+  .bosh {
+      max-width: 100%;
+      height: auto;
+  }
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav {
+        max-width: 95%;
+        height: auto;
+        margin: auto;
+        padding: 20px 10px;
+    }
+
+       .fixed {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 10;
+        }
+
+  header .about__nav {
+    
+      max-width: 95%;
+      height: auto;
+      padding: 10px 10px;
+      margin: auto;
+      display: flex;
+      z-index: 2;
+      padding-top: 60px;
+  }
+
+  header .about__p {
+      color: #727e85;
+      font-size: 20px;
+      font-weight: 800;
+  }
+
+  header .about__nav .chiziq {
+      width: 150px;
+      height: 1px;
+      align-items: center;
+      border: 2px solid #00abf0;
+      margin-top: 15px;
+      margin-left: 7px;
+  }
+
+  header .about__h1 {
+      max-width: 90%;
+      height: auto;
+      margin: auto;
+  }
+
+  header .about__h1 h1 {
+      font-size: 50px;
+      font-weight: 800;
+  }
+
+  header .about__haqimda {
+      max-width: 90%;
+      height: auto;
+      margin: auto;
+      display: grid;
+      grid-template-columns: auto auto;
+  }
+
+  header .about__haqimda .about__rasm {
+      width: 400px;
+      height: auto;
+  }
+
+  .haqimda {
+      margin-left: 20px;
+  }
+
+  .haqimda h1 {
+      color: #00abf0;
+  }
+
+  .malumot1 i {
+      font-size: 25px;
+      color: #00abf0;
+  }
+
+  .class {
+      display: flex;
+  }
+
+  .about__malumot {
+      display: grid;
+      grid-template-columns: auto auto;
+  }
+
+
+  .malumot1 h3 {
+      font-weight: 300;
+      color: #b1bbc0;
+  }
+
+  .malumot1 h3 b {
+      color: white;
+  }
+
+  .about__nav {
+      display: flex;
+      justify-content: space-between
+  }
+
+  .wsx {
+      display: flex;
+  }
+  .html{
+    max-width: 90%;
+    height: auto;
+    margin: auto;
+    margin-top: 70px;
+  }
+  .html h1{
+    font-size: 40px;
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 50px;
+  }
+  .html .rasm1{
+    max-width: 80%;
+    height: auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+    gap: 10px;
+    margin: auto;
+  }
+  .html .rasm1 .about__logo i{
+    position: relative;
+    font-size: 90px;
+    margin: auto;
+    padding: 30px;
+    border: 2px solid #727e85;
+    border-radius: 10px;
+    transition: .4s;
+    margin-bottom: 40px;
+  }
+  .html .rasm1 .about__logo{
+    margin: auto;
+    
+  }
+  .html .rasm1 .about__logo i:hover{
+    background-color: #3c4346;
+    color: #00abf0;
+  }
+  .vositalar{
+    max-width: 80%;
+    height: auto;
+    margin: auto;
+    margin-top: 90px;
+  }
+  .vositalar h1{
+    font-size: 40px;
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 50px;
+  }
+  .vositalar .rasm1{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+  }
+  .vositalar .rasm1 .about__logo i{
+    position: relative;
+    font-size: 90px;
+    margin: auto;
+    padding: 30px;
+    border: 2px solid #727e85;
+    border-radius: 10px;
+    transition: .4s;
+    margin-bottom: 40px;
+  }
+  .vositalar .rasm1 .about__logo{
+    margin: auto;
+    
+  }
+  .vositalar .rasm1 .about__logo i:hover{
+    background-color: #3c4346;
+    color: #00abf0;
+  }
+
+
+
+
+
+  /* portfolio */
+
+  .pbosh .about__nav {
+    
+    max-width: 95%;
+    height: auto;
+    padding: 10px 10px;
+    margin: auto;
+    display: flex;
+    z-index: 2;
+    padding-top: 60px;
+}
+
+.pbosh .about__p {
+    color: #727e85;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.pbosh .about__nav .chiziq {
+    width: 150px;
+    height: 1px;
+    align-items: center;
+    border: 2px solid #00abf0;
+    margin-top: 15px;
+    margin-left: 7px;
+}
+/* wfacw */
+.fixed{
+    background-color: #081b29;
+}
+
+
+
+/* portfolio */
+main{
+    max-width: 100%;
+    height: auto;
+}
+main .port1{
+    max-width: 80%;
+    height: auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    margin: auto;
+    justify-content: space-between;
+    margin-top: 50px;
+   
+}
+main .port1 .port1_1{
+    max-width: 100%;
+    border: 2px solid #727e85;
+    border-radius: 20px;
+    padding: 20px;
+    padding-bottom: 40px;
+    margin-bottom: 20px;
+}
+main .port1 .port1_1 p{
+    text-align: center;
+  padding: 5px;
+    font-weight: 600;
+}
+main .port1 .port1_1 img{
+    border-radius: 10px;
+}
+main .port1 .port1_1 a{
+    width: 90px;
+    margin: auto;
+    margin-top: 20px;
+    padding: 5px 20px;
+    text-align: center;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    display: block;
+    border-radius: 10px;
+    transition: .3s;
+}
+main .port1 .port1_1 a:hover{
+    background-color: orange;
+}
+.wsx{
+    margin-top: 10px;
+}
+
+
+
+/* contact */
+
+.ota{
+    max-width: 80%;
+    height: auto;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 45% 45%;
+    gap: 30px;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.ota .bola{
+    max-width: 100%;
+    height: 100px;
+    display: flex;
+    background-color: #3c4346;
+    flex: start;
+    align-items: center;
+}
+.bola_1{
+    margin-left: 15px;
+}
+.bola_1 i{
+    color: #00abf0;
+    font-size: 30px;
+    border: 1px solid #727e85;
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 10px;
+}
+.bola_2 {
+    margin-left: 20px;
+    box-sizing: border-box;
+}
+.bola_2 h3{
+    color: #b1bbc0;
+    line-height: 35px;
+}
+.bola_2 i{
+    font-size:20px;
+    margin-right: 10px;
+    transition: .3s;
+}
+.bola_2 i:hover{
+    color: #00abf0;
+}
+.h1{
+    max-width: 80%;
+    height: auto;
+    margin: auto;
+    font-size: 30px;
+}
+
+
+
+
+.home{
+    /* display: grid;
+    justify-content: space-between; */
+}
+
+
+
+.home-content{
+    /* border: 2px solid red;    */
+}
+.home-sci{
+    /* border: 2px solid green; */
+}
+.rasm__men{
+    /* border: 2px solid yellow; */
+    width: 100%;
+    height: 100%;
+   
+}
+.rasm__men img{
+     position: relative;
+    float: left;
+    margin-left: 90px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @keyframes showRight {
+      100% {
+          width: 0;
+      }
+  }
+
+  @keyframes manipActiveHover {
+      100% {
+          pointer-events: auto;
+      }
+  }
+  @media screen and (max-width:1100px) {
+    header .about__haqimda{
+        grid-template-columns: auto;
+    }
+    .home-imgHover::after{
+        width: 0;
+        height: 0;
+
+    }
+
+  }
+  @media screen and (max-width: 900px) {
+    main .port1{
+        grid-template-columns: 280px 280px;
+    }
+    .ota{
+        grid-template-columns: auto;
+        justify-content: center;
+    }
+  }
+
+@media (max-width: 1100px) {
+    .home{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+    }
+    .home{
+        display: grid;
+        justify-content: space-between;
+    }
+    .rasm__men{
+        width: 100px;
+        height: 500px;
+        margin-left: 300px;
+    }
+    .rasm__men img{
+        width: 300px;
+        height: 400px;
+        position: relative;
+        float: right;
+        margin-left: 500px;
+    }
+    .home-content{
+        margin-top: 100px;
+    }
+    .home-sci{
+        position: absolute;
+      bottom: -70px;
+    }
+    
+}
+
+
+  @media screen and (max-width:780px) {
+.checkboxbtn{
+        margin-top: 10px;
+        display: block;
+        margin-left: 10px;
+    }
+   .navbar a{
+       position: fixed;
+        width: 300px;
+        height: auto;
+        left: -100%;
+        text-align: center;
+        top: 80px;
+        background-color: #b1bbc0;
+        transition: 2s;
+    }
+    #check:checked ~ .navbar a{
+        left: 0;
+    }
+    .fixed .nav .navbar a{
+        display: block;
+    }
+
+      .home-imgHover::after {
+          width: 0;
+          height: 0;
+          animation-delay: 1s;
+      }
+  
+    }
+
+  @media screen and (max-width: 660px) {
+    .about__haqimda .about__malumot{
+        grid-template-columns: auto;
+    }
+    .html .rasm1{
+        grid-template-columns: auto auto;
+    }
+    .html h1{
+        font-size: 30px;
+    }
+    .vositalar h1{
+        font-size: 30px;
+    }
+    .html .rasm1 .about__logo i{
+        padding: 10px;
+    }
+    .vositalar .rasm1 .about__logo i{
+        padding: 10px;
+    }
+    main .port1 {
+        grid-template-columns: auto;
+    }
+    .rasm__men{
+        width: 100px;
+        height: 500px;
+        margin-left: 200px;
+    }
+  }
+  @media screen and (max-width:380px) {
+    
+    .html .rasm1{
+        grid-template-columns: auto ;
+        justify-content: center;
+    }
+    .vositalar .rasm1{
+        grid-template-columns: auto;
+    }
+    .vositalar h1{
+        font-size: 30px;
+    }}
